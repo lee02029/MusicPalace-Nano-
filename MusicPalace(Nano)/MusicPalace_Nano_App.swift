@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct MusicPalace_Nano_App: App {
-    let persistenceController = PersistenceController.shared
-
+    let persistenceController = CoreDataManger.shared.persistentContainer
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, persistenceController.viewContext)
+            
         }
     }
 }
+
