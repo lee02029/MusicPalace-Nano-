@@ -31,7 +31,7 @@
 		F6A2563B28202B6300F880F0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A2563A28202B6300F880F0 /* Launch Screen.storyboard */; };
 		F6A256472820AE4200F880F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A256452820AE4200F880F0 /* Preview Assets.xcassets */; };
 		F6A256482820AE4200F880F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A256462820AE4200F880F0 /* Assets.xcassets */; };
-		F6A2564A2820B04100F880F0 /* basic.png in Resources */ = {isa = PBXBuildFile; fileRef = F6A256492820B04100F880F0 /* basic.png */; };
+		F6A2565B282212DE00F880F0 /* basic.png in Resources */ = {isa = PBXBuildFile; fileRef = F6A2565A282212DE00F880F0 /* basic.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +61,7 @@
 		F6A2563C282030FB00F880F0 /* MusicPalace-Nano--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MusicPalace-Nano--Info.plist"; sourceTree = SOURCE_ROOT; };
 		F6A256452820AE4200F880F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F6A256462820AE4200F880F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F6A256492820B04100F880F0 /* basic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basic.png; sourceTree = "<group>"; };
+		F6A2565A282212DE00F880F0 /* basic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basic.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,6 @@
 				F62189F0281CE0FA00DD745E /* MusicPalaceModel.xcdatamodeld */,
 				F6A256462820AE4200F880F0 /* Assets.xcassets */,
 				F6A256442820AE4200F880F0 /* Preview Content */,
-				F6A256492820B04100F880F0 /* basic.png */,
 			);
 			path = "MusicPalace(Nano)";
 			sourceTree = "<group>";
@@ -175,6 +174,7 @@
 		F6A256442820AE4200F880F0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				F6A2565A282212DE00F880F0 /* basic.png */,
 				F6A256452820AE4200F880F0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -239,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6218A27281CE3C600DD745E /* searchData.json in Resources */,
-				F6A2564A2820B04100F880F0 /* basic.png in Resources */,
+				F6A2565B282212DE00F880F0 /* basic.png in Resources */,
 				F6A256472820AE4200F880F0 /* Preview Assets.xcassets in Resources */,
 				F6A256482820AE4200F880F0 /* Assets.xcassets in Resources */,
 				F6A2563B28202B6300F880F0 /* Launch Screen.storyboard in Resources */,

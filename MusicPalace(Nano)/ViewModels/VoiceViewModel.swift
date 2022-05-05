@@ -56,7 +56,7 @@ class VoiceViewModel : NSObject, ObservableObject , AVAudioPlayerDelegate{
         }
         
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let fileName = path.appendingPathComponent("\(Date().toString(dateFormat: "YY-MM-dd 'at' HH:mm:ss"))")
+        let fileName = path.appendingPathComponent("\(Date().toString(dateFormat: "YYYY-MM-dd 'at' HH:mm:ss"))")
         
         
         

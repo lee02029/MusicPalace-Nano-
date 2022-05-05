@@ -17,7 +17,6 @@ struct CalendarView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 
                 VStack(spacing: 20){
-                    
                     CustomDatePicker(currentDate: $currentDate)
                 }
                 .padding(.vertical)

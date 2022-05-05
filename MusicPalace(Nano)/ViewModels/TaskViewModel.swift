@@ -22,7 +22,7 @@ var tasks: [TaskMetaData] = [
     
         Task(title: "펀치넬로\nfine! "),
         Task(title: "Crush\n자나깨나")
-    ], taskDate: getSampleDate(offset: 1)),
+    ], taskDate: getSampleDate(offset: -1)),
     TaskMetaData(task: [
         
         Task(title: "nov\n부재중")
@@ -34,7 +34,7 @@ var tasks: [TaskMetaData] = [
     TaskMetaData(task: [
         
         Task(title: "김뮤지엄\nPont Alexandre iii")
-    ], taskDate: getSampleDate(offset: 10)),
+    ], taskDate: getSampleDate(offset: -10)),
     TaskMetaData(task: [
         
         Task(title: "기리보이\n 그땐 어렸으니까")
@@ -42,7 +42,7 @@ var tasks: [TaskMetaData] = [
     TaskMetaData(task: [
         
         Task(title: "강서빈, RAINUD\nEyes on me ")
-    ], taskDate: getSampleDate(offset: 15)),
+    ], taskDate: getSampleDate(offset: -15)),
     TaskMetaData(task: [
         
         Task(title: "아이유(IU)\n어푸(Ah puh)")

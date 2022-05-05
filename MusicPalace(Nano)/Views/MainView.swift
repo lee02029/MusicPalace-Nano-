@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Foundation
 
 struct MainView: View {
     @State var singer : String = ""
@@ -15,18 +15,18 @@ struct MainView: View {
     var genres = ["발라드","댄스","팝","인디","락","힙합"]
     @State private var selectedGenre = "발라드"
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: TaskData.entity(), sortDescriptors: [NSSortDescriptor(key: "dateCreated", ascending: false)])
+    @FetchRequest(entity: TaskData.entity(), sortDescriptors: [NSSortDescriptor(key: "dateCreated", ascending: true)])
     private var allTasks: FetchedResults<TaskData>
-    @State var currentDate: Date = Date()
+    var currentMainDate: Date = Date()
     
     private func saveTask() {
         
         do {
-            let taskdata = TaskData(context: viewContext)
-            taskdata.singer = singer
-            taskdata.title = title
-            taskdata.dateCreated = currentDate
-            taskdata.genre = selectedGenre
+            let task = TaskData(context: viewContext)
+            task.singer = singer
+            task.title = title
+            task.genre = selectedGenre
+            task.dateCreated = currentMainDate
             try viewContext.save()
         } catch {
             print(error.localizedDescription)
@@ -52,6 +52,7 @@ struct MainView: View {
                     HStack {
                         VStack(alignment: .leading, spacing: 10) {
                             HStack {
+                                
                                 Text("가수")
                                     .font(.system(size: 16))
                                 TextField("가수를 입력하세요", text: $singer)
@@ -77,13 +78,16 @@ struct MainView: View {
                             HStack {
                                 Text("장르")
                                     .font(.system(size: 16))
+                                
+                                Image(systemName: "scroll")
+                                    .padding(.leading,20)
                                 Picker("원하는 장르를 선택하세요",selection: $selectedGenre) {
                                     ForEach(genres, id: \.self) {
                                         Text($0)
                                     }
                                     
                                 }
-                                .padding(.leading,20)
+                                
                             }
                         }
                         
@@ -96,7 +100,7 @@ struct MainView: View {
                                     .font(.system(size: 70))
                                     .foregroundColor(Color("lightGray"))
                             })
-                            Image(systemName: "music.note")
+                            Image(systemName: "arrow.down")
                                 .font(.system(size: 36))
                                 .foregroundColor(Color("Gray"))
                         }
@@ -104,7 +108,7 @@ struct MainView: View {
                     Spacer()
                     Divider()
                     List {
-                        Section(header: Text("2022/04/28")) {
+                        Section(header: Text("\(Date().toString(dateFormat: "YYYY-MM-dd"))")) {
                             ForEach(allTasks) { task in
                                 HStack {
                                     Image(systemName:"headphones")
@@ -114,7 +118,6 @@ struct MainView: View {
                                         Text(task.title ?? "")
                                             .padding(.bottom,4)
                                         Text(task.singer ?? "")
-                                        
                                     }
                                     Spacer()
                                     VStack {
